@@ -1,0 +1,42 @@
+---
+title: "Mock DSCI 310 Final: Movie Ratings"
+toc: true
+format:
+  html: default
+  pdf: default
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+# Summary
+
+This is a mock analysis to explore whether production factors (budget, runtime) have any relationship with IMDb movie ratings.
+
+# Introduction
+
+IMDb ratings are often seen as a proxy for movie quality. In this report, we investigate whether movie characteristics like runtime or budget are associated with higher ratings.
+
+# Methods and Results
+
+We load a small movie dataset and visualize the relationship between runtime and ratings.
+
+```{r}
+library(tidyverse)
+
+movies <- read_csv("data/raw.csv")
+head(movies)
+
+ggplot(movies, aes(x = runtime, y = rating)) +
+  geom_point() +
+  labs(title = "Runtime vs. IMDb Rating")
+```
+
+# Discussion
+
+This mock analysis shows a weak visual relationship, but this is placeholder content. A full project would involve fitting a model and testing assumptions.
+
+# References
+
+-   IMDb (n.d.). IMDb Datasets. Retrieved from https://www.imdb.com/interfaces/
